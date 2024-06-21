@@ -11,6 +11,10 @@ The first stm32L476 program
     $ openocd -f board/stm32l4discovery.cfg
 5.2. In another terminal, cd to directory of the project direct. Then run 
     $ arm-none-eabi-gdb -q main.elf
+    or $ arm-none-eabi-gdb main.elf
+        (gdb) target extended-remote :3333
+            Remote debugging using :3333
+            0x08000012 in reset_handler ()
 
     Then in gdb shell, run
     (gdb) load
